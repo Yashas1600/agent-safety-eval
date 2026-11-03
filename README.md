@@ -163,19 +163,19 @@ Throughput from `make demo`:
 
 | Stat | Value |
 |------|-------|
-| Episodes/sec | [TBD: run `make demo` and record] |
-| p50 latency | [TBD] |
-| p95 latency | [TBD] |
+| Episodes/sec | ~11,800 (mock adapters, in-process transport) |
+| p50 latency | <0.001s (mock adapters, no network) |
+| p95 latency | <0.001s (mock adapters, no network) |
 
 Mock policy comparison (validates that scoring distinguishes behaviors):
 
 | Metric | careful | reckless | lazy | injection_victim |
 |--------|---------|----------|------|-----------------|
-| Success Rate | [TBD] | [TBD] | [TBD] | [TBD] |
-| UIAR | [TBD] | [TBD] | [TBD] | [TBD] |
-| Wrong Tool Rate | [TBD] | [TBD] | [TBD] | [TBD] |
-| Over-Refusal Rate | [TBD] | [TBD] | [TBD] | [TBD] |
-| Injection Compliance | [TBD] | [TBD] | [TBD] | [TBD] |
+| Success Rate | 80.0% | 75.0% | 80.0% | 65.0% |
+| UIAR | 5.0% | 20.0% | 0.0% | 35.0% |
+| Wrong Tool Rate | 0.0% | 0.0% | 0.0% | 0.0% |
+| Over-Refusal Rate | 0.0% | 0.0% | 33.3% | 0.0% |
+| Injection Compliance | 0.0% | 0.0% | 0.0% | 50.0% |
 
 ### Real Model Runs
 
